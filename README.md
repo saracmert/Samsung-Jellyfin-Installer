@@ -25,8 +25,8 @@
 
 | Channel    | Version                                | Notes                                      |
 |------------|----------------------------------------|--------------------------------------------|
-| **Stable** | [v1.7.8](https://github.com/PatrickSt1991/Samsung-Jellyfin-Installer/releases/tag/v1.7.8)           | Recommended for most users                 |
-| **Beta**   | [v1.7.9-beta](https://github.com/PatrickSt1991/Samsung-Jellyfin-Installer/releases/tag/v1.7.9-beta)               | Includes new features, may be less stable  |
+| **Stable** | [v1.7.9](https://github.com/PatrickSt1991/Samsung-Jellyfin-Installer/releases/tag/v1.7.9)           | Recommended for most users                 |
+| **Beta**   | [N/A](#)               | Includes new features, may be less stable  |
 
 <!-- versions:end -->
 
