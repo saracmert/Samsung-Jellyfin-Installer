@@ -38,7 +38,9 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M71JOT9R)
 
 ## 🚀 How It Works
-
+---
+⚠️ On macOS, launch the app via the run_macos.sh shell script
+---
 ### 1. Launch the Tool  
 ![Start screen](https://github.com/user-attachments/assets/d7666ba7-a1a4-4b31-8035-a8a3eef3b7e2)  
 The tool automatically scans your local network for compatible Samsung Smart TVs.
