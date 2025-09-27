@@ -1,7 +1,7 @@
 ---
 name: Generic bug report
 about: Create a report to help us improve
-title: "[Bug] <short description>"
+title: "[Bug] "
 labels: bug, keep-alive
 assignees: ''
 
@@ -26,6 +26,11 @@ assignees: ''
 - Yes  
 - No  
 - Not sure
+
+**Operating system?**
+- Windows
+- Linux
+- macOS
 
 **Additional Context**  
 Add any other context or logs about the problem here.
