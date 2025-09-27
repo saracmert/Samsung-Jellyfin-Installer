@@ -1,7 +1,7 @@
 ---
 name: Feature Request
 about: Suggest a new feature or improvement for the application
-title: "[Feature] <short description>"
+title: "[Feature] "
 labels: enhancement, keep-alive
 assignees: ''
 
