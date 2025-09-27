@@ -1,8 +1,8 @@
 ---
-name: Tizen 6- Bug
+name: Tizen 7- Bug
 about: Create a report to help us improve
-title: "[Tizen 6-] [Bug] <short description>"
-labels: bug, keep-alive, tizen 6-
+title: "[Tizen 7-] [Bug] "
+labels: bug, keep-alive, tizen 7-
 assignees: PatrickSt1991
 
 ---
@@ -26,6 +26,11 @@ assignees: PatrickSt1991
 - Yes  
 - No  
 - Not sure
+
+**Operating system?**
+- Windows
+- Linux
+- macOS
 
 **Additional Context**  
 Add any other context or logs about the problem here.
