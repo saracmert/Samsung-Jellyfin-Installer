@@ -323,7 +323,7 @@ namespace Samsung_Jellyfin_Installer.Services
                 updateStatus("PackagingWgtWithCertificate".Localized());
                 string packageUrlExtension = Path.GetExtension(packageUrl).TrimStart('.').ToLowerInvariant();
 
-                await RunCommandAsync(TizenCliPath, $"package -t {packageUrlExtension} -s {PackageCertificate} -- \"{packageUrl}\"");
+                await RunCommandCmdAsync(TizenCliPath, $"package -t {packageUrlExtension} -s {PackageCertificate} -- \"{packageUrl}\"");
 
                 if (Settings.Default.DeletePreviousInstall)
                 {
@@ -339,7 +339,7 @@ namespace Samsung_Jellyfin_Installer.Services
 
                 updateStatus("InstallingPackage".Localized());
 
-                string installOutput = await RunCommandAsync(TizenCliPath, $"install -n \"{packageUrl}\" -t {tvName}");
+                string installOutput = await RunCommandCmdAsync(TizenCliPath, $"install -n \"{packageUrl}\" -t {tvName}");
 
                 if (File.Exists(packageUrl) && !installOutput.Contains("Failed"))
                 {
@@ -426,7 +426,7 @@ namespace Samsung_Jellyfin_Installer.Services
                 ZipFile.CreateFromDirectory(tempDir, packageUrl);
                 Directory.Delete(tempDir, true);
 
-                await RunCommandAsync(TizenCliPath, $"sign --signing-profile {certificateName} \"{packageUrl}\"");
+                await RunCommandCmdAsync(TizenCliPath, $"sign --signing-profile {certificateName} \"{packageUrl}\"");
 
                 return InstallResult.SuccessResult();
             }
@@ -730,6 +730,12 @@ namespace Samsung_Jellyfin_Installer.Services
 
             return null;
         }
+        private static Task<string> RunCommandCmdAsync(string fileName, string arguments)
+        {
+            var cmdArgs = $"/c \"\"{fileName}\" {arguments}\"";
+            return RunCommandAsync("cmd.exe", cmdArgs);
+        }
+
         private static async Task<string> RunCommandAsync(string fileName, string arguments)
         {
             var psi = new ProcessStartInfo
@@ -959,7 +965,7 @@ namespace Samsung_Jellyfin_Installer.Services
                 if (string.IsNullOrEmpty(appId))
                     return true;
 
-                await RunCommandAsync(TizenCliPath, $"uninstall -t {tvName} -p {appId}");
+                await RunCommandCmdAsync(TizenCliPath, $"uninstall -t {tvName} -p {appId}");
 
                 appId = await SearchJellyfinApp();
 
